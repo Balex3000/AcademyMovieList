@@ -2,7 +2,10 @@ package com.balex.android.academymovielist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +20,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movies);
 
         mListView = findViewById(R.id.movies_lv);
-        ArrayList<MovieModel> dataSource = (ArrayList<MovieModel>) loadMovies();
+        final ArrayList<MovieModel> dataSource = (ArrayList<MovieModel>) loadMovies();
 
         MoviesBaseAdapter adapter = new MoviesBaseAdapter(this, dataSource);
         mListView.setAdapter(adapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                MovieModel movie = dataSource.get(position);
+                Toast.makeText(view.getContext(), movie.getTitle(), Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private List<MovieModel> loadMovies() {
