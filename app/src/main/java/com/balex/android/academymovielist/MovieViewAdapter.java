@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -55,7 +56,13 @@ public class MovieViewAdapter extends RecyclerView.Adapter <MovieViewAdapter.Vie
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int position) {
         viewHolder.onBindViewHolder(mDataSource.get(position));
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), mDataSource.get(position).getTitle(), Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
