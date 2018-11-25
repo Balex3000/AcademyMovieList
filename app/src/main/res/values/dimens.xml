@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_height">108dp</dimen>
+    <dimen name="movie_title">18sp</dimen>
+    <dimen name="movie_desc">16sp</dimen>
+</resources>
