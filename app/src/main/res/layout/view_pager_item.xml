@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/pager_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/movie_det_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Movie Title"/>
+
+    <ImageView
+        android:id="@+id/movie_det_small_img"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/jurasic_park"/>
+
+</android.support.constraint.ConstraintLayout>
