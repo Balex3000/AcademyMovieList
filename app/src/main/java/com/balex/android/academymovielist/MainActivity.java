@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,25 +57,45 @@ public class MainActivity extends AppCompatActivity {
         movie8.setTitle("Thor - Ragnarok");
         movie9.setTitle("Guardians of the Galaxy");
 
-        movie1.setImageResourceId(R.drawable.jurasic_park);
-        movie2.setImageResourceId(R.drawable.the_meg);
-        movie3.setImageResourceId(R.drawable.the_first_purge);
-        movie4.setImageResourceId(R.drawable.deadpool2);
-        movie5.setImageResourceId(R.drawable.blackpanther);
-        movie6.setImageResourceId(R.drawable.oceans8);
-        movie7.setImageResourceId(R.drawable.interstellar);
-        movie8.setImageResourceId(R.drawable.thor_ragnarock);
-        movie9.setImageResourceId(R.drawable.guardians_of_the_galaxy);
+        movie1.setImageResourceId(R.drawable.jurasic_park_small);
+        movie2.setImageResourceId(R.drawable.the_meg_small);
+        movie3.setImageResourceId(R.drawable.the_first_purge_small);
+        movie4.setImageResourceId(R.drawable.deadpool2_small);
+        movie5.setImageResourceId(R.drawable.blackpanther_small);
+        movie6.setImageResourceId(R.drawable.oceans8_small);
+        movie7.setImageResourceId(R.drawable.interstellar_small);
+        movie8.setImageResourceId(R.drawable.thor_ragnarock_small);
+        movie9.setImageResourceId(R.drawable.guardians_of_the_galaxy_small);
 
-        movie1.setDesc("Three years after the Jurassic World theme park was closed down, Owen and Claire return to Isla Nublar to save the dinosaurs when they learn that a once dormant volcano on the island is active and is threatening to extinguish all life there. Along the way, Owen sets out to find Blue, his lead raptor, and discovers a conspiracy that could disrupt the natural order of the entire planet. Life has found a way, again.");
-        movie2.setDesc("Five years ago, expert sea diver and Naval Captain Jonas Taylor encountered an unknown danger in the unexplored recesses of the Mariana Trench that forced him to abort his mission and abandon half his crew. Though the tragic incident earned him a dishonorable discharge, what ultimately cost him his career, his marriage and any semblance of honor was his unsupported and incredulous claims of what caused it - an attack on his vessel by a mammoth, 70-foot sea creature, believed to be extinct for more than a million years.");
-        movie3.setDesc("Five years ago, expert sea diver and Naval Captain Jonas Taylor encountered an unknown danger in the unexplored recesses of the Mariana Trench that forced him to abort his mission and abandon half his crew. Though the tragic incident earned him a dishonorable discharge, what ultimately cost him his career, his marriage and any semblance of honor was his unsupported and incredulous claims of what caused it - an attack on his vessel by a mammoth, 70-foot sea creature, believed to be extinct for more than a million years.");
-        movie4.setDesc("Five years ago, expert sea diver and Naval Captain Jonas Taylor encountered an unknown danger in the unexplored recesses of the Mariana Trench that forced him to abort his mission and abandon half his crew. Though the tragic incident earned him a dishonorable discharge, what ultimately cost him his career, his marriage and any semblance of honor was his unsupported and incredulous claims of what caused it - an attack on his vessel by a mammoth, 70-foot sea creature, believed to be extinct for more than a million years.");
-        movie5.setDesc("Five years ago, expert sea diver and Naval Captain Jonas Taylor encountered an unknown danger in the unexplored recesses of the Mariana Trench that forced him to abort his mission and abandon half his crew. Though the tragic incident earned him a dishonorable discharge, what ultimately cost him his career, his marriage and any semblance of honor was his unsupported and incredulous claims of what caused it - an attack on his vessel by a mammoth, 70-foot sea creature, believed to be extinct for more than a million years.");
-        movie6.setDesc("Five years ago, expert sea diver and Naval Captain Jonas Taylor encountered an unknown danger in the unexplored recesses of the Mariana Trench that forced him to abort his mission and abandon half his crew. Though the tragic incident earned him a dishonorable discharge, what ultimately cost him his career, his marriage and any semblance of honor was his unsupported and incredulous claims of what caused it - an attack on his vessel by a mammoth, 70-foot sea creature, believed to be extinct for more than a million years.");
-        movie7.setDesc("Five years ago, expert sea diver and Naval Captain Jonas Taylor encountered an unknown danger in the unexplored recesses of the Mariana Trench that forced him to abort his mission and abandon half his crew. Though the tragic incident earned him a dishonorable discharge, what ultimately cost him his career, his marriage and any semblance of honor was his unsupported and incredulous claims of what caused it - an attack on his vessel by a mammoth, 70-foot sea creature, believed to be extinct for more than a million years.");
-        movie8.setDesc("Five years ago, expert sea diver and Naval Captain Jonas Taylor encountered an unknown danger in the unexplored recesses of the Mariana Trench that forced him to abort his mission and abandon half his crew. Though the tragic incident earned him a dishonorable discharge, what ultimately cost him his career, his marriage and any semblance of honor was his unsupported and incredulous claims of what caused it - an attack on his vessel by a mammoth, 70-foot sea creature, believed to be extinct for more than a million years.");
-        movie9.setDesc("Five years ago, expert sea diver and Naval Captain Jonas Taylor encountered an unknown danger in the unexplored recesses of the Mariana Trench that forced him to abort his mission and abandon half his crew. Though the tragic incident earned him a dishonorable discharge, what ultimately cost him his career, his marriage and any semblance of honor was his unsupported and incredulous claims of what caused it - an attack on his vessel by a mammoth, 70-foot sea creature, believed to be extinct for more than a million years.");
+        movie1.setDesc("When the island's dormant volcano begins roaring to life, Owen and Claire mount a campaign to rescue the remaining dinosaurs from this extinction-level event.");
+        movie2.setDesc("After escaping an attack by what he claims was a 70-foot shark, Jonas Taylor must confront his fears to save those trapped in a sunken submersible.");
+        movie3.setDesc("America's third political party, the New Founding Fathers of America, comes to power and conducts an experiment: no laws for 12 hours on Staten Island. No one has to stay on the island, but $5,000 is given to anyone who does.");
+        movie4.setDesc("Foul-mouthed mutant mercenary Wade Wilson (AKA. Deadpool), brings together a team of fellow mutant rogues to protect a young boy with supernatural abilities from the brutal, time-traveling cyborg, Cable.");
+        movie5.setDesc("T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.");
+        movie6.setDesc("Debbie Ocean gathers an all-female crew to attempt an impossible heist at New York City's yearly Met Gala.");
+        movie7.setDesc("A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.");
+        movie8.setDesc("Thor is imprisoned on the planet Sakaar, and must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela.");
+        movie9.setDesc("A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.");
+
+        movie1.setReleaseDate("22/06/2018");
+        movie2.setReleaseDate("10/08/2018");
+        movie3.setReleaseDate("04/07/2018");
+        movie4.setReleaseDate("18/05/2018");
+        movie5.setReleaseDate("16/02/2018");
+        movie6.setReleaseDate("08/06/2018");
+        movie7.setReleaseDate("07/11/2014");
+        movie8.setReleaseDate("03/11/2017");
+        movie9.setReleaseDate("01/08/2014");
+
+        movie1.setLargeImgResId(R.drawable.jurassicworld2_large);
+        movie2.setLargeImgResId(R.drawable.the_meg_large);
+        movie3.setLargeImgResId(R.drawable.the_first_purge_large);
+        movie4.setLargeImgResId(R.drawable.deadpool2_large);
+        movie5.setLargeImgResId(R.drawable.black_panther_large);
+        movie6.setLargeImgResId(R.drawable.oceans8_large);
+        movie7.setLargeImgResId(R.drawable.interstellar_large);
+        movie8.setLargeImgResId(R.drawable.thor_ragnarok_large);
+        movie9.setLargeImgResId(R.drawable.guardians_of_the_galaxy_large);
 
         movies.add(movie1);
         movies.add(movie2);

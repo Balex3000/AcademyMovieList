@@ -5,7 +5,10 @@ import java.io.Serializable;
 public class MovieModel implements Serializable {
     private String title;
     private int imageResourceId;
+    private int largeImgResId;
     private String desc;
+    private String releaseDate;
+
 
     // Constructor
 //    public MovieModel (String pTitle, String pDesc, int pImageResourceId) {
@@ -26,6 +29,14 @@ public class MovieModel implements Serializable {
         this.imageResourceId = imageResourceId;
     }
 
+    public void setLargeImgResId(int largeImgResId) {
+        this.largeImgResId = largeImgResId;
+    }
+
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
     public int getImageResourceId() {
         return imageResourceId;
     }
@@ -36,5 +47,13 @@ public class MovieModel implements Serializable {
 
     public String getTitle() {
         return title;
+    }
+
+    public int getLargeImgResId() {
+        return largeImgResId;
+    }
+
+    public String getReleaseDate() {
+        return releaseDate;
     }
 }

@@ -1,21 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     android:id="@+id/pager_item"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/movie_det_title_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Movie Title"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/movie_det_small_img"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        tools:src="@drawable/jurasic_park"/>
+        android:id="@+id/movie_det_large_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/jurassicworld2_large"/>
 
-</android.support.constraint.ConstraintLayout>
+    <!-- center part with small picture, title, release and trailer -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/movie_det_small_img"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:src="@drawable/jurasic_park_small"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/movie_det_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="10dp"
+            tools:text="Movie Title"
+            android:textColor="@android:color/holo_purple"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_toEndOf="@id/movie_det_small_img"/>
+
+        <TextView
+            android:id="@+id/txt_released_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/movie_det_small_img"
+            android:layout_below="@id/movie_det_title_tv"
+            android:layout_marginStart="0dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:text="Release"/>
+
+        <TextView
+            android:id="@+id/movie_det_release_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/txt_released_label"
+            android:layout_below="@id/movie_det_title_tv"
+            android:layout_marginStart="16dp"
+            android:textStyle="normal"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            tools:text="01/01/2018"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/movie_det_small_img"
+            android:layout_below="@id/txt_released_label"
+            android:layout_marginTop="16dp"
+            android:text="Trailer"/>
+    </RelativeLayout>
+
+    <!-- Overview: Title and the text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:text="Overview"/>
+
+        <TextView
+            android:id="@+id/movie_det_desc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Movie Description"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
