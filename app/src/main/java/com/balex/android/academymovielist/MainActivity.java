@@ -97,6 +97,16 @@ public class MainActivity extends AppCompatActivity {
         movie8.setLargeImgResId(R.drawable.thor_ragnarok_large);
         movie9.setLargeImgResId(R.drawable.guardians_of_the_galaxy_large);
 
+        movie1.setTrailerURL("https://www.youtube.com/watch?v=vn9mMeWcgoM");
+        movie2.setTrailerURL("https://www.youtube.com/watch?v=bsLk0NPRFAc");
+        movie3.setTrailerURL("https://www.youtube.com/watch?v=UL29y0ah92w");
+        movie4.setTrailerURL("https://www.youtube.com/watch?v=D86RtevtfrA");
+        movie5.setTrailerURL("https://www.youtube.com/watch?v=xjDjIWPwcPU");
+        movie6.setTrailerURL("https://www.youtube.com/watch?v=MFWF9dU5Zc0");
+        movie7.setTrailerURL("https://www.youtube.com/watch?v=zSWdZVtXT7E");
+        movie8.setTrailerURL("https://www.youtube.com/watch?v=ue80QwXMRHg");
+        movie9.setTrailerURL("https://www.youtube.com/watch?v=dWUnYMggxy4");
+
         movies.add(movie1);
         movies.add(movie2);
         movies.add(movie3);

@@ -8,7 +8,7 @@ public class MovieModel implements Serializable {
     private int largeImgResId;
     private String desc;
     private String releaseDate;
-
+    private String trailerURL;
 
     // Constructor
 //    public MovieModel (String pTitle, String pDesc, int pImageResourceId) {
@@ -37,6 +37,10 @@ public class MovieModel implements Serializable {
         this.releaseDate = releaseDate;
     }
 
+    public void setTrailerURL(String trailerURL) {
+        this.trailerURL = trailerURL;
+    }
+
     public int getImageResourceId() {
         return imageResourceId;
     }
@@ -55,5 +59,9 @@ public class MovieModel implements Serializable {
 
     public String getReleaseDate() {
         return releaseDate;
+    }
+
+    public String getTrailerURL() {
+        return trailerURL;
     }
 }
