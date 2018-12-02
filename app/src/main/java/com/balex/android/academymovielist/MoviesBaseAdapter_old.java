@@ -8,12 +8,12 @@ import android.widget.BaseAdapter;
 
 import java.util.ArrayList;
 
-public class MoviesBaseAdapter extends BaseAdapter {
+public class MoviesBaseAdapter_old extends BaseAdapter {
 
     private LayoutInflater mInflater;
     private ArrayList<MovieModel> mDataSource;
 
-    public MoviesBaseAdapter (Context pContext, ArrayList<MovieModel> pItems) {
+    public MoviesBaseAdapter_old(Context pContext, ArrayList<MovieModel> pItems) {
         mDataSource = pItems;
         mInflater = (LayoutInflater) pContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -47,19 +47,19 @@ public class MoviesBaseAdapter extends BaseAdapter {
         */
 
         // new approach
-        MovieViewHolder holder;
+        MovieViewHolder_old holder;
 
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.item_movie, parent, false);
             // approach 2.2 with view holder
-            holder = new MovieViewHolder();
+            holder = new MovieViewHolder_old();
             holder.image = convertView.findViewById(R.id.item_movie_iv);
             holder.title = convertView.findViewById(R.id.tv_movie_title);
             holder.desc = convertView.findViewById(R.id.tv_movie_desc);
             convertView.setTag(holder);
         } else {
             // part of aproach 2.2
-            holder = (MovieViewHolder) convertView.getTag();
+            holder = (MovieViewHolder_old) convertView.getTag();
         }
 
         // approach 2.1

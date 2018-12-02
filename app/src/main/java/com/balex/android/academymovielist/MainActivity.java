@@ -4,17 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView mListView;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -29,21 +25,6 @@ public class MainActivity extends AppCompatActivity {
         mDataSource = (ArrayList<MovieModel>) loadMovies();
 
         initRecyclerView();
-
-        /*
-        mListView = findViewById(R.id.movies_lv);
-
-        MoviesBaseAdapter adapter = new MoviesBaseAdapter(this, mDataSource);
-        mListView.setAdapter(adapter);
-
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                MovieModel movie = mDataSource.get(position);
-                Toast.makeText(view.getContext(), movie.getTitle(), Toast.LENGTH_LONG).show();
-            }
-        });
-        */
     }
 
     private void initRecyclerView () {
