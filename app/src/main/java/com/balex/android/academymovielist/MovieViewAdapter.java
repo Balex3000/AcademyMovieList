@@ -1,6 +1,8 @@
 package com.balex.android.academymovielist;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,7 +12,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import android.support.v7.app.AppCompatActivity;
+import static android.support.v4.content.ContextCompat.startActivity;
+
 
 public class MovieViewAdapter extends RecyclerView.Adapter <MovieViewAdapter.ViewHolder> {
 
@@ -62,6 +68,12 @@ public class MovieViewAdapter extends RecyclerView.Adapter <MovieViewAdapter.Vie
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), mDataSource.get(position).getTitle(), Toast.LENGTH_LONG).show();
+                // Open MovieDetails activity
+                Intent intent = new Intent(view.getContext(), MovieDetailsActivity.class);
+                Bundle bundle = new Bundle();
+                intent.putExtra("LIST", (Serializable) mDataSource);
+                intent.putExtra("CurrentItem", position);
+                startActivity(view.getContext(), intent, bundle);
             }
         });
     }

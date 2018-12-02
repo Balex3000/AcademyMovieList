@@ -1,6 +1,8 @@
 package com.balex.android.academymovielist;
 
-public class MovieModel {
+import java.io.Serializable;
+
+public class MovieModel implements Serializable {
     private String title;
     private int imageResourceId;
     private String desc;
