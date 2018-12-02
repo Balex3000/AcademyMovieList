@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import android.support.v7.app.AppCompatActivity;
 import static android.support.v4.content.ContextCompat.startActivity;
 
 
@@ -67,7 +66,8 @@ public class MovieViewAdapter extends RecyclerView.Adapter <MovieViewAdapter.Vie
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), mDataSource.get(position).getTitle(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(view.getContext(), mDataSource.get(position).getTitle(), Toast.LENGTH_LONG).show();
+
                 // Open MovieDetails activity
                 Intent intent = new Intent(view.getContext(), MovieDetailsActivity.class);
                 Bundle bundle = new Bundle();

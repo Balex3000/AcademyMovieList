@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Academy Movie List</string>
+    <string name="movieListSmallImgContDesc">movie poster small</string>
+    <string name="movieDetLargeImgContDesc">movie wide poster</string>
+    <string name="movieDetReleaseLabel">Release</string>
+    <string name="trailerButtonLabel">Trailer</string>
+    <string name="overviewLabel">Overview</string>
 </resources>

@@ -21,31 +21,31 @@ public class MovieModel implements Serializable {
         this.title = title;
     }
 
-    public void setDesc(String desc) {
+    void setDesc(String desc) {
         this.desc = desc;
     }
 
-    public void setImageResourceId(int imageResourceId) {
+    void setImageResourceId(int imageResourceId) {
         this.imageResourceId = imageResourceId;
     }
 
-    public void setLargeImgResId(int largeImgResId) {
+    void setLargeImgResId(int largeImgResId) {
         this.largeImgResId = largeImgResId;
     }
 
-    public void setReleaseDate(String releaseDate) {
+    void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 
-    public void setTrailerURL(String trailerURL) {
+    void setTrailerURL(String trailerURL) {
         this.trailerURL = trailerURL;
     }
 
-    public int getImageResourceId() {
+    int getImageResourceId() {
         return imageResourceId;
     }
 
-    public String getDesc() {
+    String getDesc() {
         return desc;
     }
 
@@ -53,15 +53,15 @@ public class MovieModel implements Serializable {
         return title;
     }
 
-    public int getLargeImgResId() {
+    int getLargeImgResId() {
         return largeImgResId;
     }
 
-    public String getReleaseDate() {
+    String getReleaseDate() {
         return releaseDate;
     }
 
-    public String getTrailerURL() {
+    String getTrailerURL() {
         return trailerURL;
     }
 }

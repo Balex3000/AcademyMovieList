@@ -10,11 +10,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
     ArrayList<MovieModel> mDataSource;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView () {
-        mRecyclerView = findViewById(R.id.recyclerView);
-        mLayoutManager = new LinearLayoutManager(this);
+        RecyclerView mRecyclerView = findViewById(R.id.recyclerView);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new MovieViewAdapter(this, mDataSource);
+        RecyclerView.Adapter mAdapter = new MovieViewAdapter(this, mDataSource);
         mRecyclerView.setAdapter(mAdapter);
     }
 
