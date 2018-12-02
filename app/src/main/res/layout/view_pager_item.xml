@@ -70,6 +70,7 @@
             tools:text="01/01/2018"/>
 
         <Button
+            android:id="@+id/movie_det_trailer_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/movie_det_small_img"

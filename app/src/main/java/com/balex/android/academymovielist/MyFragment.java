@@ -1,5 +1,7 @@
 package com.balex.android.academymovielist;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -7,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,8 +20,7 @@ public class MyFragment extends Fragment {
     private static final String TAG_ARG_TITLE = "movieTitle";
     private static final String TAG_ARG_RELEASE = "releaseDate";
     private static final String TAG_ARG_DESC = "movieDesc";
-
-    private int imageResId;
+    private static final String TAG_ARG_TRAILER = "movieTrailer";
 
     private MovieModel mMovie;
 
@@ -39,6 +41,7 @@ public class MyFragment extends Fragment {
         args.putString(TAG_ARG_DESC, pMovie.getDesc());
         args.putString(TAG_ARG_RELEASE, pMovie.getReleaseDate());
         args.putInt(TAG_ARG_IMAGE_LARGE, pMovie.getLargeImgResId());
+        args.putString(TAG_ARG_TRAILER, pMovie.getTrailerURL());
 
         myFragment.setArguments(args);
 
@@ -61,6 +64,7 @@ public class MyFragment extends Fragment {
             mMovie.setLargeImgResId(getArguments().getInt(TAG_ARG_IMAGE_LARGE));
             mMovie.setReleaseDate(getArguments().getString(TAG_ARG_RELEASE));
             mMovie.setDesc(getArguments().getString(TAG_ARG_DESC));
+            mMovie.setTrailerURL(getArguments().getString(TAG_ARG_TRAILER));
         }
     }
 
@@ -86,6 +90,15 @@ public class MyFragment extends Fragment {
 
         ImageView largeImg = view.findViewById(R.id.movie_det_large_img);
         largeImg.setImageResource(mMovie.getLargeImgResId());
+
+        Button trailerButton = view.findViewById(R.id.movie_det_trailer_btn);
+        trailerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(mMovie.getTrailerURL()));
+                startActivity(webIntent);
+            }
+        });
 
         return view;
     }
