@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".MovieDetailsActivity"
             android:label="Movie details"/>
+        <activity android:name=".AsyncActivity"
+            android:label="Async Activity"/>
     </application>
 
 </manifest>

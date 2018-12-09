@@ -8,4 +8,6 @@
     <dimen name="movieDetSmallImgSideMargin">10dp</dimen>
     <dimen name="movieDetTitleTextSize">22sp</dimen>
     <dimen name="movieDetReleaseTextSize">18sp</dimen>
+    <dimen name="async_layout_padding">10dp</dimen>
+    <dimen name="async_thread_text_size">30sp</dimen>
 </resources>

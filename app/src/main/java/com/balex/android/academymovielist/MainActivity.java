@@ -1,5 +1,6 @@
 package com.balex.android.academymovielist;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,6 +11,8 @@ import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
+
+//import static android.support.v4.content.ContextCompat.startActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,7 +54,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_async) {
+            Intent intent = new Intent(getApplicationContext(), AsyncActivity.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.action_thread) {
             return true;
         }
 
