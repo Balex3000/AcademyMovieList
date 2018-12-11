@@ -6,17 +6,21 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AsyncActivity extends AppCompatActivity {
 
     private static final String SAVED_STATE_CURRENT_NUMBER = "LAST_NUMBER";
-    private static final Integer COUNT_DOWN_STARTS_FROM = 5;
+    private static final String SAVED_STATE_TV_TEXT = "SAVED_TEXT";
+    private static final Integer COUNT_DOWN_STARTS_FROM = 9;
 
     private TextView countDownTextView;
     private CountDown task;
     private static Integer currentNumber;
+    private static String currentText;
     private static boolean isRunning;
 
     @Override
@@ -26,11 +30,20 @@ public class AsyncActivity extends AppCompatActivity {
 
         countDownTextView = findViewById(R.id.tv_async);
 
+        Log.d("Alex", "in onCreate AsyncActivity");
+
         if (savedInstanceState != null) {
+            currentText = savedInstanceState.getString(SAVED_STATE_TV_TEXT);
             currentNumber = savedInstanceState.getInt(SAVED_STATE_CURRENT_NUMBER);
-            task = new CountDown(countDownTextView);
-            isRunning = true;
-            task.execute(currentNumber);
+            Log.d("Alex", "we have saved data-currNum: " + currentNumber);
+
+            if (currentText != null) { countDownTextView.setText(currentText); }
+
+            if (currentNumber != 0) {
+                task = new CountDown(countDownTextView);
+                isRunning = true;
+                task.execute(currentNumber);
+            }
         }
     }
 
@@ -62,11 +75,14 @@ public class AsyncActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
+    public void onSaveInstanceState(Bundle outState) {
+        //Toast.makeText(getApplicationContext(), "onSaveInst currentNumber: " + currentNumber, Toast.LENGTH_SHORT).show();
+        Log.d("Alex","AsyncActivity.onSaveInstanceState is running: " + isRunning + "currNum: " + currentNumber);
+        super.onSaveInstanceState(outState);
         if (isRunning) {
             outState.putInt(SAVED_STATE_CURRENT_NUMBER, currentNumber);
         }
+        outState.putString(SAVED_STATE_TV_TEXT, currentText);
     }
 
     /** Async Task */
@@ -100,7 +116,8 @@ public class AsyncActivity extends AppCompatActivity {
         }
 
         protected void onPreExecute() {
-            asyncTextView.setText("");
+            currentText = "";
+            asyncTextView.setText(currentText);
         }
 
         /**
@@ -115,12 +132,14 @@ public class AsyncActivity extends AppCompatActivity {
         }
 
         protected void onPostExecute(String result) {
-            asyncTextView.setText(result);
+            currentText = result;
+            asyncTextView.setText(currentText);
         }
 
         @Override
         protected void onCancelled() {
-            asyncTextView.setText("cancelled");
+            currentText = "Cancelled!";
+            asyncTextView.setText(currentText);
         }
     }
 
