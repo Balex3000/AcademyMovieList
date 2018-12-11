@@ -20,7 +20,8 @@
         android:text="@string/btn_async_start"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_async_create"
-        app:layout_constraintEnd_toStartOf="@id/btn_async_cancel"/>
+        app:layout_constraintEnd_toStartOf="@id/btn_async_cancel"
+        android:onClick="startButtonActions"/>
 
     <Button
         android:id="@+id/btn_async_cancel"
@@ -28,7 +29,8 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_async_cancel"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="cancelButtonActions"/>
 
     <TextView
         android:id="@+id/tv_async"
