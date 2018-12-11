@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
     }
 
+    /** Inflate menu */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /** Treat click on menu options */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -60,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_thread) {
-            return true;
+            Intent intent = new Intent(getApplicationContext(), ThreadActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

@@ -22,6 +22,8 @@
             android:label="Movie details"/>
         <activity android:name=".AsyncActivity"
             android:label="Async Activity"/>
+        <activity android:name=".ThreadActivity"
+            android:label="Thread Activity"/>
     </application>
 
 </manifest>
