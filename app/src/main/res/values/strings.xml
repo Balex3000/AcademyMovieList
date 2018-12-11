@@ -12,4 +12,5 @@
     <string name="btn_async_cancel">Cancel</string>
     <string name="async_init_text">This is AsyncTask Activity</string>
     <string name="thread_init_text">This is Thread Activity</string>
+    <string name="countdown_cancelled_message">Cancelled!</string>
 </resources>
