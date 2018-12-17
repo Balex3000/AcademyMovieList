@@ -14,4 +14,6 @@
     <string name="async_init_text">This is AsyncTask Activity</string>
     <string name="thread_init_text" tools:ignore="ExtraTranslation">This is Thread Activity</string>
     <string name="countdown_cancelled_message">Cancelled!</string>
+    <string name="btn_bg_serv_intent">Start Intent Service</string>
+    <string name="btn_bg_serv_service">Start Service</string>
 </resources>

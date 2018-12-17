@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_bg_serv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="The Progress" />
+
+    <TextView
+        android:id="@+id/tv_bg_serv_perc_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_bg_serv_progress"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="40%"/>
+    
+    <Button
+        android:id="@+id/btn_bg_serv_start_intent"
+        android:layout_width="@dimen/btn_bg_srvc_w"
+        android:layout_height="@dimen/btn_bg_srvc_h"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_bg_serv_start_service"
+        android:layout_marginBottom="20dp"
+        android:text="@string/btn_bg_serv_intent"/>
+
+    <Button
+        android:id="@+id/btn_bg_serv_start_service"
+        android:layout_width="@dimen/btn_bg_srvc_w"
+        android:layout_height="@dimen/btn_bg_srvc_h"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_bg_serv_start_intent"
+        android:layout_marginBottom="20dp"
+        android:text="@string/btn_bg_serv_service"/>
 
 </android.support.constraint.ConstraintLayout>
