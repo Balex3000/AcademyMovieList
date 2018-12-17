@@ -24,6 +24,8 @@
             android:label="Async Activity"/>
         <activity android:name=".ThreadActivity"
             android:label="Thread Activity"/>
+        <activity android:name=".BGServiceActivity"
+            android:label="Background Service Activity"/>
     </application>
 
 </manifest>

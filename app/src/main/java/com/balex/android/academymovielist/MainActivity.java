@@ -67,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
+        if (id == R.id.action_service) {
+            Intent intent = new Intent(getApplicationContext(), BGServiceActivity.class);
+            startActivity(intent);
+        }
+
         return super.onOptionsItemSelected(item);
     }
 

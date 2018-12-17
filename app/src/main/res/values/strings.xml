@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Academy Movie List</string>
     <string name="movieListSmallImgContDesc">movie poster small</string>
     <string name="movieDetLargeImgContDesc">movie wide poster</string>
@@ -7,10 +7,11 @@
     <string name="overviewLabel">Overview</string>
     <string name="menu_async_label">Open ASync Task Activity</string>
     <string name="menu_thread_label">Open Thread Handler Activity</string>
+    <string name="menu_service_label">Open Background Service Activity</string>
     <string name="btn_async_create">Create</string>
     <string name="btn_async_start">Start</string>
     <string name="btn_async_cancel">Cancel</string>
     <string name="async_init_text">This is AsyncTask Activity</string>
-    <string name="thread_init_text">This is Thread Activity</string>
+    <string name="thread_init_text" tools:ignore="ExtraTranslation">This is Thread Activity</string>
     <string name="countdown_cancelled_message">Cancelled!</string>
 </resources>
